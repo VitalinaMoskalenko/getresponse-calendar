@@ -21,6 +21,7 @@ const Container = styled.button`
   border: 1px solid ${({ theme }) => theme.colors.darkGrey};
   border-radius: 8px;
   cursor: pointer;
+  margin: 10px 10px 0px 0px;
 
   :hover {
     opacity: 0.8;
