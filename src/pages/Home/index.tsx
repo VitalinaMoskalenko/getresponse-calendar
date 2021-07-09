@@ -3,12 +3,15 @@ import moment from "moment";
 import styled from "styled-components";
 import Header from "./components/Header";
 import Footer from "./components/Fotter";
+import { ProgressBar } from "../../components";
 
 const Container = styled.div``;
-const BodyContainer = styled.div``;
-const ProgressBar = styled.div``;
+const BodyContainer = styled.div`
+  margin: 10px 50px;
+`;
 const Week = styled.div``;
 const ProteinOption = styled.div``;
+
 const HeaderBody = styled.div`
   display: flex;
   flex-direction: row;
@@ -21,7 +24,7 @@ function Home() {
       <Header />
       <BodyContainer>
         <HeaderBody>
-          <ProgressBar />
+          <ProgressBar countWeek={12} accomplishedWeek={7} />
           <Week />
           <ProteinOption />
         </HeaderBody>

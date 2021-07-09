@@ -1,5 +1,4 @@
-import React, { CSSProperties } from "react";
-import { useTranslation } from "react-i18next";
+import React from "react";
 import styled from "styled-components";
 import { H3 } from "../Headings";
 
@@ -14,9 +13,6 @@ const Container = styled.div<HeaderPropsType>`
     isSelected ? `1px solid ${theme.colors.orange}` : "0px"};
   color: ${({ isSelected, theme }) =>
     isSelected ? `${theme.colors.orange}` : `${theme.colors.darkGrey}`};
-  :before {
-    width: 50px;
-  }
 `;
 
 type PropsType = {
@@ -24,9 +20,7 @@ type PropsType = {
   selectedHederItem?: boolean;
 };
 
-const Item = ({ selectedHederItem, titleHederItem }: PropsType) => {
-  const { t } = useTranslation();
-
+const HeaderItem = ({ selectedHederItem, titleHederItem }: PropsType) => {
   return (
     <Container isSelected={!!selectedHederItem}>
       <H3>{titleHederItem}</H3>
@@ -34,4 +28,4 @@ const Item = ({ selectedHederItem, titleHederItem }: PropsType) => {
   );
 };
 
-export default Item;
+export default HeaderItem;
