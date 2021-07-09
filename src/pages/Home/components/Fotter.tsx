@@ -6,8 +6,6 @@ import { H3 } from "../../../components/Headings";
 import { SmallBody } from "../../../components/Paragraphs";
 
 const Container = styled.div`
-  position: absolute;
-  bottom: 0;
   left: 0;
   right: 0%;
   display: flex;
@@ -62,11 +60,13 @@ const Footer = () => {
         <BodyText>{t(`${baseTranslationPath}MobileBox.body`)}</BodyText>
         <ContainerButton>
           <Button
+            icon="https://cdn.iconscout.com/icon/free/png-256/ios-apple-572947.png"
             text={t(`${baseTranslationPath}MobileBox.buttonIos`)}
             onClick={() => {}}
             arrowRight={true}
           />
           <Button
+            icon="https://image.flaticon.com/icons/png/512/160/160138.png"
             text={t(`${baseTranslationPath}MobileBox.buttonAndroid`)}
             onClick={() => {}}
             arrowRight={true}

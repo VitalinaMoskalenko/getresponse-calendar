@@ -4,8 +4,14 @@ import ProgressBar from "../";
 
 export default { title: "ProgressBar" };
 
-export const defaultProgressBar = () => <ProgressBar countWeek={12} />;
+export const defaultProgressBar = () => (
+  <ProgressBar progressTitle="Your 12 week progress" countWeek={12} />
+);
 
 export const accomplishedProgressBar = () => (
-  <ProgressBar countWeek={12} accomplishedWeek={7} />
+  <ProgressBar
+    progressTitle="Your 12 week progress"
+    countWeek={12}
+    accomplishedWeek={7}
+  />
 );

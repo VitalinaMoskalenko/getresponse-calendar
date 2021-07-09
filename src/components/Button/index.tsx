@@ -6,10 +6,6 @@ type ArrowPropsType = {
   hasArrow?: boolean;
 };
 
-type IconPropsType = {
-  hasIcon?: boolean;
-};
-
 const Container = styled.button`
   display: flex;
   flex-direction: row;
@@ -28,9 +24,13 @@ const Container = styled.button`
   }
 `;
 
-const Text = styled(Body)<IconPropsType>`
+const Img = styled.img`
+  margin-right: 10px;
+  height: 20px;
+`;
+
+const Text = styled(Body)`
   color: ${({ theme }) => theme.colors.darkGrey};
-  margin-right: ${({ hasIcon }) => (hasIcon ? "10px" : "0px")};
 `;
 
 const Arrow = styled(Body)<ArrowPropsType>`
@@ -58,7 +58,7 @@ const Button = ({
   return (
     <Container style={style} onClick={onClick}>
       {arrowLeft && <Arrow> {"<"} </Arrow>}
-      {icon && <Text hasIcon={!!icon}>{icon}</Text>}
+      {icon && <Img src={icon} />}
       {text && <Text>{text}</Text>}
       {arrowRight && <Arrow hasArrow={!!text}> {">"} </Arrow>}
     </Container>

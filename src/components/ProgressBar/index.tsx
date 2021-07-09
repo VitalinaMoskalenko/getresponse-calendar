@@ -39,6 +39,7 @@ const ProgressItem = styled.div`
   display: flex;
   flex-direction: row;
   align-items: start;
+  margin-top: 5px;
 `;
 
 const ContainerCountWeek = styled.div`
@@ -50,11 +51,17 @@ const ContainerCountWeek = styled.div`
 type PropsType = {
   countWeek: number;
   accomplishedWeek?: number;
+  progressTitle: string;
 };
 
-const ProgressBar = ({ countWeek, accomplishedWeek }: PropsType) => {
+const ProgressBar = ({
+  countWeek,
+  accomplishedWeek,
+  progressTitle,
+}: PropsType) => {
   return (
     <Container>
+      <SmallBody>{progressTitle}</SmallBody>
       <ProgressItem>
         {[...Array(countWeek)].map((e, i) => (
           <ProgressItem key={i}>

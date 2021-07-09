@@ -27,5 +27,10 @@ export const arrowLeftButton = () => (
 );
 
 export const withIconButton = () => (
-  <Button text="Click Me" arrowRight={true} onClick={() => {}} />
+  <Button
+    icon="https://image.flaticon.com/icons/png/512/160/160138.png"
+    text="Click Me"
+    arrowRight={true}
+    onClick={() => {}}
+  />
 );

@@ -27,6 +27,10 @@ const en = {
           buttonReadQuestions: "Read FAQs",
         },
       },
+      HeaderBody: {
+        proteinOption: "Select your protein options",
+        progressBar: "Your {{week}} week progress",
+      },
     },
   },
 };
