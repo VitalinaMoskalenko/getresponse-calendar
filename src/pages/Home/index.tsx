@@ -3,10 +3,15 @@ import moment from "moment";
 import styled from "styled-components";
 import Header from "./components/Header";
 import Footer from "./components/Fotter";
-import { ProgressBar, WeekSlider, ProteinOption } from "../../components";
+import {
+  ProgressBar,
+  WeekSlider,
+  ProteinOption,
+  DayLine,
+} from "../../components";
 import { useTranslation } from "react-i18next";
 import TimeLine from "./components/TimeLine";
-import DayLine from "./components/DayLine";
+import { weekData } from "../../mock/mock";
 
 const baseTranslationPath = "Pages.HomePage.HeaderBody.";
 
@@ -19,6 +24,7 @@ const DetailDay = styled.div`
   margin: 20px 50px 0px 50px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 `;
 
 const HeaderBody = styled.div`
@@ -56,7 +62,16 @@ function Home() {
           />
         </HeaderBody>
         <DetailDay>
-          <TimeLine />
+          {weekData.map((item) => (
+            <DayLine
+              key={item.id}
+              dayNumber={item.dayNumber}
+              day={item.meal}
+              carbs={item.carbs}
+              workout={item.workout}
+              guiltFreeDay={item.guiltFreeDay}
+            />
+          ))}
         </DetailDay>
       </BodyContainer>
       <Footer />

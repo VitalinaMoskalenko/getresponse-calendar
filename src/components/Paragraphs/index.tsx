@@ -9,5 +9,6 @@ export const Body = styled.p`
 export const SmallBody = styled.p`
   font-size: ${({ theme }) => theme.fonts.size.smallBody}px;
   font-family: Arial;
+  color: ${({ theme }) => theme.colors.darkGrey};
   margin: 0;
 `;

@@ -31,6 +31,9 @@ const en = {
         proteinOption: "Select your protein options",
         progressBar: "Your {{week}} week progress",
       },
+      DayLine: {
+        day: "Day {{dayNumber}}",
+      },
     },
   },
 };
