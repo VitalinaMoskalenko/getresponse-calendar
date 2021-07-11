@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders ProteinOption correctly 1`] = `
+<div
+  className="sc-dlnjwi hqeLaF"
+>
+  <p
+    className="sc-gtsrHT fsyTPD"
+  >
+    
+  </p>
+  <div
+    className="sc-hKFxyN gZrZNh"
+  >
+    <img
+      className="sc-eCApnc cWOuTk"
+      onClick={[Function]}
+    />
+    <img
+      className="sc-eCApnc cWOuTk"
+      onClick={[Function]}
+    />
+    <img
+      className="sc-eCApnc cWOuTk"
+      onClick={[Function]}
+    />
+    <img
+      className="sc-eCApnc cWOuTk"
+      onClick={[Function]}
+    />
+    <img
+      className="sc-eCApnc cWOuTk"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;

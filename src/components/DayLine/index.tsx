@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
-import { useTranslation } from "react-i18next";
+import React from "react";
 import styled from "styled-components";
 import DayItem from "../DayItem";
 import { H3 } from "../Headings";
-import { Body, SmallBody } from "../Paragraphs";
+import { SmallBody } from "../Paragraphs";
 
 type ContainerPropsType = {
   isSelected: boolean;
@@ -79,8 +78,12 @@ const GuiltFreeDayContainer = styled.div`
 `;
 
 const IconWorkout = styled.img``;
+const IconPrinter = styled.img`
+  width: 50px;
+`;
 
 type PropsType = {
+  title?: string;
   dayNumber: number;
   carbs?: string;
   workout?: boolean;
@@ -89,27 +92,20 @@ type PropsType = {
     name: string;
     isAccomplished: boolean;
   }[];
-  time?: {
-    id: number;
-    name: string;
-  }[];
 };
 
-const baseTranslationPath = "Pages.HomePage.DayLine.";
-
 const DayLine = ({
-  time,
+  title,
   dayNumber,
   day,
   guiltFreeDay,
   carbs,
   workout,
 }: PropsType) => {
-  const { t } = useTranslation();
   return (
     <Container isGuiltFreeDay={guiltFreeDay} isSelected={dayNumber === 65}>
       <DayNumber isSelected={dayNumber === 65}>
-        <H3>{t(`${baseTranslationPath}day`, { dayNumber: dayNumber })}</H3>
+        <H3>{title}</H3>
       </DayNumber>
       {guiltFreeDay ? (
         <GuiltFreeDayContainer>
@@ -126,7 +122,7 @@ const DayLine = ({
       )}
       {guiltFreeDay ? (
         <PrintContainer>
-          <h5>PrintContainer</h5>
+          <IconPrinter src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/print-512.png" />
         </PrintContainer>
       ) : (
         <AdditionalContainer>

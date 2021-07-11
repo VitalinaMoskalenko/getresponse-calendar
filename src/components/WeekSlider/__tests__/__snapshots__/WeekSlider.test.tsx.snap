@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders WeekSlider correctly 1`] = `
+<div
+  className="sc-kEqXSa ljIMGs"
+>
+  <h1
+    className="sc-fujyAs sc-crzoAE EUgGk keCRtU"
+  >
+    Week 
+    1
+  </h1>
+</div>
+`;

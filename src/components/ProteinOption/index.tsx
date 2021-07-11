@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import Button from "../Button";
-import { H3 } from "../Headings";
+import { SmallBody } from "../Paragraphs";
 
 type ImgPropsType = {
   iconUrl: string;
 };
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+`;
+
+const IconContainer = styled.div`
+  margin-top: 5px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22,17 +29,21 @@ const Img = styled.img<ImgPropsType>`
 
 type PropsType = {
   icon: string;
+  text?: string;
   onClick: () => void;
 };
 
-const ProteinOption = ({ icon, onClick }: PropsType) => {
+const ProteinOption = ({ text, icon, onClick }: PropsType) => {
   return (
     <Container>
-      <Img iconUrl={icon} onClick={onClick} />
-      <Img iconUrl={icon} onClick={onClick} />
-      <Img iconUrl={icon} onClick={onClick} />
-      <Img iconUrl={icon} onClick={onClick} />
-      <Img iconUrl={icon} onClick={onClick} />
+      <SmallBody>{text}</SmallBody>
+      <IconContainer>
+        <Img iconUrl={icon} onClick={onClick} />
+        <Img iconUrl={icon} onClick={onClick} />
+        <Img iconUrl={icon} onClick={onClick} />
+        <Img iconUrl={icon} onClick={onClick} />
+        <Img iconUrl={icon} onClick={onClick} />
+      </IconContainer>
     </Container>
   );
 };

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders DayLine correctly 1`] = `
+<div
+  className="sc-pNWdM fPjrWe"
+>
+  <div
+    className="sc-jrsJWt gqHGaR"
+  >
+    <h1
+      className="sc-gKAaRy kalXHB"
+    />
+  </div>
+  <div
+    className="sc-dlnjwi bfyrKl"
+  >
+    <p
+      className="sc-gtsrHT fsyTPD"
+    >
+      
+    </p>
+  </div>
+  <div
+    className="sc-kEqXSa bTSwWp"
+  >
+    <div
+      className="sc-iqAclL vUoeS"
+    >
+      <p
+        className="sc-gtsrHT fsyTPD"
+      />
+    </div>
+    <div
+      className="sc-crzoAE gZtnyw"
+    >
+      <img
+        className="sc-ksluID"
+      />
+    </div>
+  </div>
+</div>
+`;

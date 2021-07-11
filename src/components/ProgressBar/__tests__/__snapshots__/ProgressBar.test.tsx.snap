@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders ProgressBar correctly 1`] = `
+<div
+  className="sc-dlnjwi"
+>
+  <p
+    className="sc-gtsrHT fsyTPD"
+  >
+    
+  </p>
+  <div
+    className="sc-jSFjdj iHQLjq"
+  >
+    <div
+      className="sc-jSFjdj iHQLjq"
+    >
+      <div
+        className="sc-gKAaRy ezgkaX"
+      >
+        <div
+          className="sc-hKFxyN dwjDcy"
+        />
+        <p
+          className="sc-gtsrHT fsyTPD"
+        >
+          1
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

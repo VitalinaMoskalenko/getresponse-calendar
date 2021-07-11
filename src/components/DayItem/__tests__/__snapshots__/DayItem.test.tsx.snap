@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders DayItem correctly 1`] = `
+<div
+  className="sc-dlnjwi bfyrKl"
+>
+  <p
+    className="sc-gtsrHT fsyTPD"
+  >
+    meal
+  </p>
+  <img
+    className="sc-hKFxyN byCXgy"
+    src="https://static.thenounproject.com/png/966940-200.png"
+  />
+</div>
+`;

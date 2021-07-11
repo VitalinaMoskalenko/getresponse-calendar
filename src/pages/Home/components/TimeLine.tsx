@@ -9,7 +9,7 @@ type TimeItemPropsType = {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100px;
+  width: fit-content;
   background-color: ${({ theme }) => theme.colors.lightGrey};
   padding-top: 64px;
   margin-bottom: 2px;
@@ -18,7 +18,7 @@ const Container = styled.div`
 const TimeItem = styled.div<TimeItemPropsType>`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100px;
   height: ${({ isIndex }) => (isIndex ? "122px" : "80px")};

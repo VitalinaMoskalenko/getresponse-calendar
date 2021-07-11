@@ -151,23 +151,23 @@ export const weekData = [
     meal: [
       {
         name: "Bod•ē Shake",
-        isAccomplished: true,
+        isAccomplished: false,
       },
       {
         name: "Ham and Swiss Roll Ups",
-        isAccomplished: true,
+        isAccomplished: false,
       },
       {
         name: "Turkey Melt",
-        isAccomplished: true,
+        isAccomplished: false,
       },
       {
         name: "Bod•ē Burn with Mozzarella and Tomato Slices",
-        isAccomplished: true,
+        isAccomplished: false,
       },
       {
         name: "Turkey Melt",
-        isAccomplished: true,
+        isAccomplished: false,
       },
     ],
     carbs: "Low-Carbs",
@@ -177,6 +177,187 @@ export const weekData = [
     id: 7,
     dayNumber: 70,
     weekNumber: 7,
+    guiltFreeDay: true,
+  },
+
+  {
+    id: 8,
+    dayNumber: 71,
+    weekNumber: 8,
+    meal: [
+      {
+        name: "Bod•ē Shake",
+        isAccomplished: false,
+      },
+      {
+        name: "Ham and Swiss Roll Ups",
+        isAccomplished: false,
+      },
+      {
+        name: "Turkey Melt",
+        isAccomplished: false,
+      },
+      {
+        name: "Bod•ē Burn with Mozzarella and Tomato Slices",
+        isAccomplished: false,
+      },
+      {
+        name: "Turkey Melt",
+        isAccomplished: false,
+      },
+    ],
+    carbs: "Low-Carbs",
+    workout: false,
+  },
+  {
+    id: 9,
+    dayNumber: 72,
+    weekNumber: 8,
+    meal: [
+      {
+        name: "Bod•ē Shake",
+        isAccomplished: false,
+      },
+      {
+        name: "Ham and Swiss Roll Ups",
+        isAccomplished: false,
+      },
+      {
+        name: "Turkey Melt",
+        isAccomplished: false,
+      },
+      {
+        name: "Bod•ē Burn with Mozzarella and Tomato Slices",
+        isAccomplished: false,
+      },
+      {
+        name: "Turkey Melt",
+        isAccomplished: false,
+      },
+    ],
+    carbs: "Low-Carbs",
+    workout: false,
+  },
+  {
+    id: 10,
+    dayNumber: 73,
+    weekNumber: 8,
+    meal: [
+      {
+        name: "Bod•ē Shake",
+        isAccomplished: false,
+      },
+      {
+        name: "Ham and Swiss Roll Ups",
+        isAccomplished: false,
+      },
+      {
+        name: "Turkey Melt",
+        isAccomplished: false,
+      },
+      {
+        name: "Bod•ē Burn with Mozzarella and Tomato Slices",
+        isAccomplished: false,
+      },
+      {
+        name: "Turkey Melt",
+        isAccomplished: false,
+      },
+    ],
+    carbs: "Low-Carbs",
+    workout: false,
+  },
+  {
+    id: 11,
+    dayNumber: 74,
+    weekNumber: 8,
+    meal: [
+      {
+        name: "Bod•ē Shake",
+        isAccomplished: false,
+      },
+      {
+        name: "Ham and Swiss Roll Ups",
+        isAccomplished: false,
+      },
+      {
+        name: "Turkey Melt",
+        isAccomplished: false,
+      },
+      {
+        name: "Bod•ē Burn with Mozzarella and Tomato Slices",
+        isAccomplished: false,
+      },
+      {
+        name: "Turkey Melt",
+        isAccomplished: false,
+      },
+    ],
+    carbs: "Low-Carbs",
+    workout: false,
+  },
+  {
+    id: 12,
+    dayNumber: 75,
+    weekNumber: 8,
+    meal: [
+      {
+        name: "Bod•ē Shake",
+        isAccomplished: false,
+      },
+      {
+        name: "Ham and Swiss Roll Ups",
+        isAccomplished: false,
+      },
+      {
+        name: "Turkey Melt",
+        isAccomplished: false,
+      },
+      {
+        name: "Bod•ē Burn with Mozzarella and Tomato Slices",
+        isAccomplished: false,
+      },
+      {
+        name: "Turkey Melt",
+        isAccomplished: false,
+      },
+    ],
+    carbs: "Low-Carbs",
+    workout: false,
+  },
+  {
+    id: 13,
+    dayNumber: 76,
+    weekNumber: 8,
+    meal: [
+      {
+        name: "Bod•ē Shake",
+        isAccomplished: false,
+      },
+      {
+        name: "Ham and Swiss Roll Ups",
+        isAccomplished: false,
+      },
+      {
+        name: "Turkey Melt",
+        isAccomplished: false,
+      },
+      {
+        name: "Bod•ē Burn with Mozzarella and Tomato Slices",
+        isAccomplished: false,
+      },
+      {
+        name: "Turkey Melt",
+        isAccomplished: false,
+      },
+    ],
+    carbs: "Low-Carbs",
+    workout: false,
+  },
+  {
+    id: 17,
+    dayNumber: 77,
+    weekNumber: 8,
     guiltFreeDay: true,
   },
 ];

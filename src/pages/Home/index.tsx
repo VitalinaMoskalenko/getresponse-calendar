@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import moment from "moment";
 import styled from "styled-components";
 import Header from "./components/Header";
@@ -13,7 +13,7 @@ import { useTranslation } from "react-i18next";
 import { weekData, time } from "../../mock/mock";
 import TimeLine from "./components/TimeLine";
 
-const baseTranslationPath = "Pages.HomePage.HeaderBody.";
+const baseTranslationPath = "Pages.HomePage.";
 
 const Container = styled.div``;
 const BodyContainer = styled.div`
@@ -38,8 +38,10 @@ const HeaderBody = styled.div`
 function Home() {
   const { t } = useTranslation();
 
+  const [weekNumber, setWeekNumber] = useState(7);
+
   const onValueChanged = (value: number) => {
-    console.log(value);
+    setWeekNumber(value);
   };
   return (
     <Container>
@@ -47,7 +49,9 @@ function Home() {
       <BodyContainer>
         <HeaderBody>
           <ProgressBar
-            progressTitle={t(`${baseTranslationPath}progressBar`, { week: 12 })}
+            progressTitle={t(`${baseTranslationPath}HeaderBody.progressBar`, {
+              week: 12,
+            })}
             countWeek={12}
             accomplishedWeek={7}
           />
@@ -57,23 +61,29 @@ function Home() {
             onValueChanged={onValueChanged}
           />
           <ProteinOption
+            text={t(`${baseTranslationPath}HeaderBody.proteinOption`)}
             onClick={() => {}}
             icon="https://cdn.iconscout.com/icon/free/png-512/cheese-1564339-1323577.png"
           />
         </HeaderBody>
         <DetailDay>
           <TimeLine time={time} />
-          {weekData.map((item) => (
-            <DayLine
-              key={item.id}
-              dayNumber={item.dayNumber}
-              day={item.meal}
-              carbs={item.carbs}
-              workout={item.workout}
-              guiltFreeDay={item.guiltFreeDay}
-              time={time}
-            />
-          ))}
+          {weekData.map(
+            (item) =>
+              item.weekNumber === weekNumber && (
+                <DayLine
+                  title={t(`${baseTranslationPath}DayLine.day`, {
+                    dayNumber: item.dayNumber,
+                  })}
+                  key={item.id}
+                  dayNumber={item.dayNumber}
+                  day={item.meal}
+                  carbs={item.carbs}
+                  workout={item.workout}
+                  guiltFreeDay={item.guiltFreeDay}
+                />
+              )
+          )}
         </DetailDay>
       </BodyContainer>
       <Footer />
