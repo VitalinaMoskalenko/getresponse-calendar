@@ -180,3 +180,26 @@ export const weekData = [
     guiltFreeDay: true,
   },
 ];
+
+export const time = [
+  {
+    id: 1,
+    name: "6:00AM",
+  },
+  {
+    id: 2,
+    name: "9:00AM",
+  },
+  {
+    id: 3,
+    name: "12:00PM",
+  },
+  {
+    id: 4,
+    name: "3:00PM",
+  },
+  {
+    id: 5,
+    name: "6:00PM",
+  },
+];

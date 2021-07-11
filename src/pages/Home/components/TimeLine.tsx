@@ -1,56 +1,63 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
-import { SmallBody } from "../../../components/Paragraphs";
+import { SmallBody } from "../../../components";
+
+type TimeItemPropsType = {
+  isIndex: boolean;
+};
 
 const Container = styled.div`
   display: flex;
-  flex: 1;
   flex-direction: column;
+  width: 100px;
+  background-color: ${({ theme }) => theme.colors.lightGrey};
+  padding-top: 64px;
+  margin-bottom: 2px;
+`;
+
+const TimeItem = styled.div<TimeItemPropsType>`
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: stretch;
-`;
-
-const TimeBox = styled.div`
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  height: 80px;
+  width: 100px;
+  height: ${({ isIndex }) => (isIndex ? "122px" : "80px")};
   padding: 10px;
-  background-color: aqua;
+  border-bottom: 2px solid ${({ theme }) => theme.colors.darkGrey};
 `;
 
-const WorkoutBox = styled.div`
+const Workout = styled.div`
   display: flex;
-  flex-direction: row;
-  height: 80px;
-  width: 80px;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 20px;
+  padding: 10px;
 `;
 
-const Workout = styled(SmallBody)`
-  align-self: flex-end;
-`;
+type PropsType = {
+  time: {
+    id: number;
+    name: string;
+  }[];
+};
 
-const TimeLine = () => {
+const TimeLine = ({ time }: PropsType) => {
+  useEffect(() => {
+    return () => {
+      console.log(time.length);
+    };
+  }, [time]);
   return (
     <Container>
-      <TimeBox>
-        <SmallBody>6:00AM</SmallBody>
-      </TimeBox>
-      <TimeBox>
-        <SmallBody>9:00AM</SmallBody>
-      </TimeBox>
-      <TimeBox>
-        <SmallBody>12:00PM</SmallBody>
-      </TimeBox>
-      <TimeBox>
-        <SmallBody>3:00PM</SmallBody>
-      </TimeBox>
-      <TimeBox>
-        <SmallBody>6:00PM</SmallBody>
-      </TimeBox>
-      <WorkoutBox>
-        <Workout>Workout</Workout>
-      </WorkoutBox>
+      {time.map((item, index) => (
+        <TimeItem key={item.id} isIndex={index === time.length - 1}>
+          <SmallBody>{item.name}</SmallBody>
+        </TimeItem>
+      ))}
+      <Workout>
+        <SmallBody>Workout</SmallBody>
+      </Workout>
     </Container>
   );
 };

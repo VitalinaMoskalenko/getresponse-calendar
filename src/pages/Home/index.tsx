@@ -2,7 +2,7 @@ import React from "react";
 import moment from "moment";
 import styled from "styled-components";
 import Header from "./components/Header";
-import Footer from "./components/Fotter";
+import Footer from "./components/Footer";
 import {
   ProgressBar,
   WeekSlider,
@@ -10,8 +10,8 @@ import {
   DayLine,
 } from "../../components";
 import { useTranslation } from "react-i18next";
+import { weekData, time } from "../../mock/mock";
 import TimeLine from "./components/TimeLine";
-import { weekData } from "../../mock/mock";
 
 const baseTranslationPath = "Pages.HomePage.HeaderBody.";
 
@@ -62,6 +62,7 @@ function Home() {
           />
         </HeaderBody>
         <DetailDay>
+          <TimeLine time={time} />
           {weekData.map((item) => (
             <DayLine
               key={item.id}
@@ -70,6 +71,7 @@ function Home() {
               carbs={item.carbs}
               workout={item.workout}
               guiltFreeDay={item.guiltFreeDay}
+              time={time}
             />
           ))}
         </DetailDay>

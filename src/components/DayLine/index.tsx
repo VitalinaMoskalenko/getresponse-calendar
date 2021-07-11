@@ -89,11 +89,16 @@ type PropsType = {
     name: string;
     isAccomplished: boolean;
   }[];
+  time?: {
+    id: number;
+    name: string;
+  }[];
 };
 
 const baseTranslationPath = "Pages.HomePage.DayLine.";
 
 const DayLine = ({
+  time,
   dayNumber,
   day,
   guiltFreeDay,
